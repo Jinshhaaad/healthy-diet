@@ -6,7 +6,7 @@
   --font: "Inter", sans-serif;
   --body-color: #637381;
   --heading-color: #212b36;
-  --primary-color: #3056d3;
+  --primary-color: #90c26c;
   --white: #ffffff;
 }
 
@@ -193,6 +193,12 @@ p {
 }
 
 /* ===== Header CSS ===== */
+.logo-img {
+  padding-top: 1.5;
+  max-width: 150px; /* Adjust the maximum width as per your design */
+  height: 100px; /* Ensures the aspect ratio is maintained */
+}
+
 .ud-header {
   position: absolute;
   top: 0;
@@ -221,9 +227,9 @@ p {
 .navbar .startup-logo{
   color: var(--white);
 }
-.sticky .navbar .startup-logo{
+/* .sticky .navbar .startup-logo{
   color: var(--primary-color) !important;
-}
+} */
 .navbar {
   padding: 0px 0;
   border-radius: 5px;
@@ -2606,4 +2612,31 @@ p {
     padding: 10px 20px;
   }
 }
+.video-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.video-wrapper {
+  flex-basis: calc(25% - 20px); /* 4 videos per row on desktop (adjust spacing) */
+  margin-bottom: 20px;
+}
+
+@media (max-width: 992px) {
+  .video-wrapper {
+      flex-basis: calc(50% - 20px); /* 2 videos per row on tablets */
+  }
+}
+
+@media (max-width: 576px) {
+  .video-wrapper {
+      flex-basis: 100%; /* 1 video per row on mobile */
+  }
+}
+
+
+
+
 /*# sourceMappingURL=ud-styles.css.map */
